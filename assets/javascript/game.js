@@ -69,7 +69,24 @@ $(orange).keypress(function () {
     console.log(score);
 });
 
-//if user matches the randNum variable, then they WIN
+//another way of adding crystal value to random number
+$("#.red").on("click" + red + randNum);
+append(score);
+
+
+$("#.red").on("click" + green + randNum);
+append(score);
+
+
+$("#.red").on("click" + blue + randNum);
+append(score);
+
+
+$("#.red").on("click" + orange + randNum);
+append(score);
+
+
+
 
 
 
