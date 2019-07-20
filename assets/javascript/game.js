@@ -40,3 +40,7 @@ Math.floor(Math.random() * 10);
 //loading the starting functions upon new game
 Start()
 Values()
+
+//add values of crystals when clicked and relay to score box
+
+
