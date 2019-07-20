@@ -43,47 +43,47 @@ console.log(blue);
 console.log(green);
 console.log(orange);
 
-
 //loading the starting functions upon new game
 Start()
 Values()
 
-//on crystal press, add stored value to total score
-$(red).keypress(function () {
-    document.getElementById("red").innerHTML = " " + score.join(" ");
-    console.log(score);
-});
-
-$(green).keypress(function () {
-    document.getElementById("green").innerHTML = " " + score.join(" ");
-    console.log(score);
-});
-
-$(blue).keypress(function () {
-    document.getElementById("blue").innerHTML = " " + score.join(" ");
-    console.log(score);
-});
-
-$(orange).keypress(function () {
-    document.getElementById("orange").innerHTML = " " + score.join(" ");
-    console.log(score);
-});
-
-//another way of adding crystal value to random number
-$("#.red").on("click" + red + randNum);
+$("#.red").on("click", red + randNum);
 append(score);
 
-
-$("#.red").on("click" + green + randNum);
+$("#.red").on("click", green + randNum);
 append(score);
 
-
-$("#.red").on("click" + blue + randNum);
+$("#.red").on("click", blue + randNum);
 append(score);
 
-
-$("#.red").on("click" + orange + randNum);
+$("#.red").on("click", orange + randNum);
 append(score);
+
+//ON CRYSTAL PRESS, ADD STORED VALUE TO RANDOM NUMBER (ALTERNATE SOLUTION USING JS AND JQ)
+// $(red).keypress(function () {
+//     document.getElementById("red").innerHTML = " " + score.join(" ");
+//     console.log(score);
+// });
+
+// $(green).keypress(function () {
+//     document.getElementById("green").innerHTML = " " + score.join(" ");
+//     console.log(score);
+// });
+
+// $(blue).keypress(function () {
+//     document.getElementById("blue").innerHTML = " " + score.join(" ");
+//     console.log(score);
+// });
+
+// $(orange).keypress(function () {
+//     document.getElementById("orange").innerHTML = " " + score.join(" ");
+//     console.log(score);
+// });
+
+//ANOTHER WAY OF ADDING ON CRYSTAL PRESS, ADD STORED VALUE TO RANDOM NUMBER
+
+
+//if score = greater than randNum then GAME OVER MAN
 
 
 
