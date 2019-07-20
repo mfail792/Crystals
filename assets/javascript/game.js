@@ -16,9 +16,13 @@ var losses = 0;
 $(document).ready()
 
 //starts game by drawing random number from numbers array and pushing to HTML
+
 function Start() {
     randNum = numbers[Math.floor(Math.random() * numbers.length)];
-    //pushing random chosen number to HTML
+    //pushing random chosen number to HTML.  *IF BELOW JS DOES NOT WORK, TRY JQUERY CODE*:
+
+    //     $("$("#random").text(randNum);")
+
     document.getElementById("random").innerHTML = " " + randNum.join(" ");
 }
 
@@ -48,16 +52,16 @@ Start()
 Values()
 
 $(".red").on("click", red + randNum);
-append(".score");
+text(".score");
 
 $(".green").on("click", green + randNum);
-append(".score");
+text(".score");
 
 $(".blue").on("click", blue + randNum);
-append(".score");
+text(".score");
 
 $(".orange").on("click", orange + randNum);
-append(".score");
+text(".score");
 
 //ON CRYSTAL PRESS, ADD STORED VALUE TO RANDOM NUMBER (ALTERNATE SOLUTION USING JS AND JQ)
 // $(red).keypress(function () {
