@@ -47,17 +47,17 @@ console.log(orange);
 Start()
 Values()
 
-$("#.red").on("click", red + randNum);
-append(score);
+$(".red").on("click", red + randNum);
+append(".score");
 
-$("#.red").on("click", green + randNum);
-append(score);
+$(".green").on("click", green + randNum);
+append(".score");
 
-$("#.red").on("click", blue + randNum);
-append(score);
+$(".blue").on("click", blue + randNum);
+append(".score");
 
-$("#.red").on("click", orange + randNum);
-append(score);
+$(".orange").on("click", orange + randNum);
+append(".score");
 
 //ON CRYSTAL PRESS, ADD STORED VALUE TO RANDOM NUMBER (ALTERNATE SOLUTION USING JS AND JQ)
 // $(red).keypress(function () {
@@ -80,7 +80,6 @@ append(score);
 //     console.log(score);
 // });
 
-//ANOTHER WAY OF ADDING ON CRYSTAL PRESS, ADD STORED VALUE TO RANDOM NUMBER
 
 
 //if score = greater than randNum then GAME OVER MAN
