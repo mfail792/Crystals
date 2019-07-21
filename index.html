@@ -12,8 +12,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <!-- JS file -->
-    <script src="./assets/javascript/game.js"></script>
     <!-- Internal CSS file -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <!--Meyerweb reset CSS file -->
@@ -28,7 +26,7 @@
         <!-- first row title of game -->
         <div class="row">
 
-            <div class="col-md-3" style="background-color: orange">
+            <div class="col-md-6" style="background-color: orange">
                 <h1>CrystalsCollector!</h1>
             </div>
 
@@ -37,7 +35,8 @@
         <div class="row">
             <!-- second row containing game rules -->
 
-            <div class="col-md-6" style="background-color: peachpuff">
+            <div class="col-md-7" style="background-color: peachpuff">
+
                 <p>You will be given a random number at the start of the game.</p>
                 <br>
                 <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points
@@ -56,6 +55,7 @@
             <div class="row">
 
                 <div class="col-sm-4 random" style="background-color: green">
+
                 </div>
                 <!-- wins and losses -->
                 <div class="col-sm-2" style="background-color: aqua">
@@ -64,63 +64,65 @@
                     <span id="wins"></span>
                 </div>
                 <div>
-                    <h3>Losses: </h3>
-                    <span id="losses"></span>
+                    <div class="col-sm-2" style="background-color: aqua">
+                        <h3>Losses: </h3>
+                        <span id="losses"></span>
+                    </div>
+
                 </div>
 
-            </div>
-
-            <!-- crystals -->
-            <div class="row">
-
-                <button class="btn btn-default">
-                    <div class="col-sm-2 red">
-                        <img src="./assets/images/red.png" width="20" />
-                    </div>
-                </button>
-
-                <button class="btn btn-default">
-                    <div class="col-sm-2 blue">
-                        <img src="./assets/images/blue.png" width="20" />
-                    </div>
-                </button>
-
-                <button class="btn btn-default">
-                    <div class="col-sm-2 green">
-                        <img src="./assets/images/green.jpg" width="20" />
-                    </div>
-                </button>
-
-                <button class="btn btn-default">
-                    <div class="col-sm-2 orange">
-                        <img src="./assets/images/orange.png" width="20" />
-                    </div>
-                </button>
-
-                <!--your total score box -->
+                <!-- crystals -->
                 <div class="row">
-                    <div class="col-sm-4" style="background-color: teal">Your total score is:
+                    <div class="col-sm-2 red">
+                        <button class="btn btn-default">
+                            <img src="./assets/images/red.png" width="20" />
                     </div>
+                    </button>
 
-                    <!-- actual score -->
+                    <div class="col-sm-2 blue">
+                        <button class="btn btn-default">
+                            <img src="./assets/images/blue.png" width="20" />
+                    </div>
+                    </button>
+
+                    <div class="col-sm-2 green">
+                        <button class="btn btn-default">
+                            <img src="./assets/images/green.jpg" width="20" />
+                    </div>
+                    </button>
+
+                    <div class="col-sm-2 orange">
+                        <button class="btn btn-default">
+                            <img src="./assets/images/orange.png" width="20" />
+                    </div>
+                    </button>
+
+                    <!--your total score box -->
                     <div class="row">
-                        <div class="col-sm-4 score" style="background-color: teal">
+                        <div class="col-sm-4 box" style="background-color: teal">Your score:
+                        </div>
+                        <br>
+                        <!-- actual score -->
+                        <div class="row">
+                            <div class="col-sm-10 score" style="background-color: teal">0
+                            </div>
+
                         </div>
 
 
                     </div>
-
-
                 </div>
             </div>
         </div>
-    </div>
 
 
     </div>
 
     </div>
     </div>
+
+    <!-- JS file -->
+    <script src="./assets/javascript/game.js"></script>
 
 </body>
 
