@@ -1,12 +1,12 @@
 //declaring variables
-var randNum = [];
+var randNum = 0;
 var numbers = [45, 87, 54, 66, 37, 24, 72];
 var score = 0;
 var number = 0;
-var green = [];
-var red = [];
-var blue = [];
-var orange = [];
+var green = 0;
+var red = 0;
+var blue = 0;
+var orange = 0;
 
 //counters
 var wins = 0;
@@ -23,22 +23,18 @@ function Start() {
 
     //     $("$("#random").text(randNum);")
 
-    document.getElementById("random").innerHTML = " " + randNum.join(" ");
+    $(".random").text(randNum);
 }
 
 //assigning random values 1-10 to crystals at start
 function Values() {
-    red = document.getElementById("red").innerHTML =
-        Math.floor(Math.random() * 10);
+    red = Math.floor(Math.random() * 10);
 
-    blue = document.getElementById("blue").innerHTML =
-        Math.floor(Math.random() * 10);
+    blue = Math.floor(Math.random() * 10);
 
-    green = document.getElementById("green").innerHTML =
-        Math.floor(Math.random() * 10);
+    green = Math.floor(Math.random() * 10);
 
-    orange = document.getElementById("orange").innerHTML =
-        Math.floor(Math.random() * 10);
+    orange = Math.floor(Math.random() * 10);
 }
 
 //console logging
@@ -51,17 +47,62 @@ console.log(orange);
 Start()
 Values()
 
-$(".red").on("click", red + randNum);
-text(".score");
+//checking game parameters for win or loss
+function conditionCheck(score) {
+    if (score === randNum) {
+        alert("You Win");
 
-$(".green").on("click", green + randNum);
-text(".score");
+        //put function to reset game code here
+    }
+    else if (score > randNum) {
+        alert("Game Over Man!")
 
-$(".blue").on("click", blue + randNum);
-text(".score");
+        //put function to reset game code here
 
-$(".orange").on("click", orange + randNum);
-text(".score");
+    } else { }
+}
+
+//telling crystals what to do with their values and checking game conditions after for a win or loss
+$(".red").on("click", function () {
+    score = score + red;
+    $(".score").text(score);
+    conditionCheck(score)
+
+});
+
+$(".green").on("click", function () {
+    score = score + green;
+    $(".score").text(score);
+    conditionCheck(score)
+
+});
+
+$(".blue").on("click", function () {
+    score = score + blue;
+    $(".blue").text(score);
+    conditionCheck(score);
+});
+
+$(".orange").on("click", function () {
+    score = score + orange;
+    $(".orange").text(score);
+    conditionCheck(score);
+});
+
+
+
+//NEXT
+//if score = greater than randNum then GAME OVER MAN
+
+
+
+
+
+
+
+
+
+
 
 //ON CRYSTAL PRESS, ADD STORED VALUE TO RANDOM NUMBER (ALTERNATE SOLUTION USING JS AND JQ)
 // $(red).keypress(function () {
@@ -86,7 +127,7 @@ text(".score");
 
 
 
-//if score = greater than randNum then GAME OVER MAN
+
 
 
 
