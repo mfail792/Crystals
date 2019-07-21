@@ -34,8 +34,9 @@ function Values() {
 }
 
 function Reset() {
-
+    Start()
 }
+
 
 //console logging
 console.log(red);
@@ -47,21 +48,22 @@ console.log(orange);
 Start()
 Values()
 
-//checking game parameters for win or loss
+//checking game conditions for win or loss
 function conditionCheck(score) {
     if (score === randNum) {
         wins++;
         $("#wins").html("<h3>" + wins + "</h3>");
         alert("You Win");
+        Reset();
 
-        //put function to reset game code here
+
     }
     else if (score > randNum) {
         losses++;
         $("#losses").html("<h3>" + losses + "</h3>");
         alert("Game Over Man!");
+        Reset();
 
-        //put function to reset game code here
 
     } else { }
 }
@@ -92,19 +94,6 @@ $(".orange").on("click", function () {
     $(".orange").text(score);
     conditionCheck(score);
 });
-
-
-
-//NEXT
-//if score = greater than randNum then GAME OVER MAN
-
-
-
-
-
-
-
-
 
 
 
