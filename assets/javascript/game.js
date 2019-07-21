@@ -34,8 +34,9 @@ function Values() {
 }
 
 function Reset() {
-    Start()
-    $(".score").text(score);
+    Start();
+    $(".score").text("0");
+   
 }
 
 
@@ -53,15 +54,15 @@ Values()
 function conditionCheck(score) {
     if (score === randNum) {
         wins++;
-        $("#wins").html("<h3>" + wins + "</h3>");
-        alert("You Win");
+        $("#wins").append("<h3>" + wins + "</h3>");
+        alert("You Win!");
         Reset();
 
 
     }
     else if (score > randNum) {
         losses++;
-        $("#losses").html("<h4>" + losses + "</h4>");
+        $("#losses").append("<h4>" + losses + "</h4>");
         alert("Game Over Man!");
         Reset();
 
