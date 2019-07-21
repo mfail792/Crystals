@@ -16,13 +16,9 @@ var losses = 0;
 $(document).ready()
 
 //starts game by drawing random number from numbers array and pushing to HTML
-
 function Start() {
     randNum = numbers[Math.floor(Math.random() * numbers.length)];
-    //pushing random chosen number to HTML.  *IF BELOW JS DOES NOT WORK, TRY JQUERY CODE*:
-
-    //     $("$("#random").text(randNum);")
-
+    //pushing random chosen number to HTML.  
     $(".random").text(randNum);
 }
 
@@ -35,6 +31,10 @@ function Values() {
     green = Math.floor(Math.random() * 10);
 
     orange = Math.floor(Math.random() * 10);
+}
+
+function Reset() {
+
 }
 
 //console logging
@@ -50,12 +50,16 @@ Values()
 //checking game parameters for win or loss
 function conditionCheck(score) {
     if (score === randNum) {
+        wins++;
+        $("#wins").html("<h3>" + wins + "</h3>");
         alert("You Win");
 
         //put function to reset game code here
     }
     else if (score > randNum) {
-        alert("Game Over Man!")
+        losses++;
+        $("#losses").html("<h3>" + losses + "</h3>");
+        alert("Game Over Man!");
 
         //put function to reset game code here
 
