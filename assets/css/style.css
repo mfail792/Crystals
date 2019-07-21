@@ -4,11 +4,8 @@ body {
 }
 
 .random {
-    float: left;
-    margin: 10px;
-    padding-right: 30px;
-    padding-bottom: 75px;
     font-size: 50px;
+    color: black;
 }
 
 .col-md-6 {
@@ -19,22 +16,20 @@ body {
     float: left;
 }
 
+
+
 .col-md-7 {
     font-size: 120%;
 }
 
-.box {
-    color: white;
-    padding-right: 20px;
-    margin: 25px;
-    position: absolute;
-    float: left;
-
-}
-
 .score {
     color: white;
-    font-size: 75px;
-    margin: 20px;
+    font-size: 40px;
 }
+
+.box {
+    color: white;
+    font-size: 20px;
+    }
+
 
