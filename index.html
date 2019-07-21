@@ -21,7 +21,7 @@
 
 <body>
     <!-- Creating the master container -->
-    <div class="container">
+    <div class="container-fluid">
 
         <!-- first row title of game -->
         <div class="row">
@@ -29,8 +29,6 @@
             <div class="col-md-6" style="background-color: orange">
                 <h1>CrystalsCollector!</h1>
             </div>
-
-
         </div>
         <div class="row">
             <!-- second row containing game rules -->
@@ -50,70 +48,72 @@
                 <p>Each time when the game starts, the game will change the values of each crystal.</p>
                 <br>
             </div>
+        </div>
 
-            <!--random number generated at start; wins/losses box (two columns) -->
-            <div class="row">
+        <!--random number generated at start; wins/losses box (two columns) -->
+        <div class="row">
 
-                <div class="col-sm-4 random" style="background-color: green">
+            <div class="col-sm-4 random" style="background-color: green">
 
-                </div>
-                <!-- wins and losses -->
-                <div class="col-sm-2" style="background-color: aqua">
-
+            </div>
+            <!-- wins and losses -->
+            <div class="col-sm-2 counter" style="background-color: aqua">
+                <span id="wins">
                     <h3>Wins: </h3>
-                    <span id="wins"></span>
+                </span>
+                <br>
+                <h4>Losses: </h4>
+                <span id="losses">
+                </span>
+            </div>
+
+        </div>
+
+        <!-- crystals -->
+        <div class="row">
+
+            <div class="col-sm-2 red">
+                <button class="btn btn-default">
+                    <img src="./assets/images/red.png" width="75" />
+                </button>
+            </div>
+
+            <div class="col-sm-2 blue">
+                <button class="btn btn-default">
+                    <img src="./assets/images/blue.png" width="75" />
+                </button>
+            </div>
+
+
+            <div class="col-sm-2 green">
+                <button class="btn btn-default">
+                    <img src="./assets/images/green.jpg" width="75" />
+                </button>
+            </div>
+
+
+            <div class="col-sm-2 orange">
+                <button class="btn btn-default">
+                    <img src="./assets/images/orange.png" width="75" />
+                </button>
+            </div>
+
+        </div>
+
+            <!--your total score box -->
+            <div class="row">
+                <div class="col-sm-4 box" style="background-color: teal">Your score:
                 </div>
-                <div>
-                    <div class="col-sm-2" style="background-color: aqua">
-                        <h3>Losses: </h3>
-                        <span id="losses"></span>
-                    </div>
-
+                <br>
+                <!-- actual score -->
+            <div class="row">
+               <div class="col-sm-4 score" style="background-color: teal">0
                 </div>
-
-                <!-- crystals -->
-                <div class="row">
-                    <div class="col-sm-2 red">
-                        <button class="btn btn-default">
-                            <img src="./assets/images/red.png" width="20" />
-                    </div>
-                    </button>
-
-                    <div class="col-sm-2 blue">
-                        <button class="btn btn-default">
-                            <img src="./assets/images/blue.png" width="20" />
-                    </div>
-                    </button>
-
-                    <div class="col-sm-2 green">
-                        <button class="btn btn-default">
-                            <img src="./assets/images/green.jpg" width="20" />
-                    </div>
-                    </button>
-
-                    <div class="col-sm-2 orange">
-                        <button class="btn btn-default">
-                            <img src="./assets/images/orange.png" width="20" />
-                    </div>
-                    </button>
-
-                    <!--your total score box -->
-                    <div class="row">
-                        <div class="col-sm-4 box" style="background-color: teal">Your score:
-                        </div>
-                        <br>
-                        <!-- actual score -->
-                        <div class="row">
-                            <div class="col-sm-10 score" style="background-color: teal">0
-                            </div>
-
-                        </div>
-
-
-                    </div>
                 </div>
             </div>
-        </div>
+
+
+
 
 
     </div>

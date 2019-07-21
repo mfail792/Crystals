@@ -35,6 +35,7 @@ function Values() {
 
 function Reset() {
     Start()
+    $(".score").text(score);
 }
 
 
@@ -60,7 +61,7 @@ function conditionCheck(score) {
     }
     else if (score > randNum) {
         losses++;
-        $("#losses").html("<h3>" + losses + "</h3>");
+        $("#losses").html("<h4>" + losses + "</h4>");
         alert("Game Over Man!");
         Reset();
 
