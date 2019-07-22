@@ -36,7 +36,7 @@ function Values() {
 function Reset() {
     Start();
     $(".score").text("0");
-   
+
 }
 
 
@@ -54,19 +54,15 @@ Values()
 function conditionCheck(score) {
     if (score === randNum) {
         wins++;
-        $("#wins").append("<h3>" + wins + "</h3>");
+        $("#wins").html("Wins: " + wins);
         alert("You Win!");
         Reset();
-
-
     }
     else if (score > randNum) {
         losses++;
-        $("#losses").append("<h4>" + losses + "</h4>");
+        $("#losses").html("Losses: " + losses);
         alert("Game Over Man!");
         Reset();
-
-
     } else { }
 }
 
@@ -74,14 +70,14 @@ function conditionCheck(score) {
 $(".red").on("click", function () {
     score = score + red;
     $(".score").text(score);
-    conditionCheck(score)
+    conditionCheck(score);
 
 });
 
 $(".green").on("click", function () {
     score = score + green;
     $(".score").text(score);
-    conditionCheck(score)
+    conditionCheck(score);
 
 });
 
