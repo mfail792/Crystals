@@ -94,9 +94,11 @@ $(".orange").on("click", function () {
 function Reset() {
     $(".score").text("0");
     score = 0;
+    Values();
     Start();
 }
 
+// *NOTES* //
 
 //ON CRYSTAL PRESS, ADD STORED VALUE TO RANDOM NUMBER (ALTERNATE SOLUTION USING JS AND JQ)
 // $(red).keypress(function () {
@@ -118,7 +120,6 @@ function Reset() {
 //     document.getElementById("orange").innerHTML = " " + score.join(" ");
 //     console.log(score);
 // });
-
 
 
 
