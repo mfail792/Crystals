@@ -10,7 +10,17 @@ body {
 
 .col-md-4 {
     font-size: 125%;
+    color: black;
+   
 }
+
+h1 {
+    color: white;
+    }
+
+#CC {
+    font-size: 150%;
+    }
 
 
 .col-md-6 {
@@ -18,6 +28,7 @@ body {
     color: white;
     font-size: 55px;
     float: left;
+    width: 50%;
     
 }
 
