@@ -7,6 +7,8 @@ var green = 0;
 var red = 0;
 var blue = 0;
 var orange = 0;
+var min = 1;
+var max = 10;
 
 //counters
 var wins = 0;
@@ -24,13 +26,13 @@ function Start() {
 
 //assigning random values 1-10 to crystals at start
 function Values() {
-    red = Math.floor(Math.random() * 10);
+    red = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    blue = Math.floor(Math.random() * 10);
+    blue = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    green = Math.floor(Math.random() * 10);
+    green = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    orange = Math.floor(Math.random() * 10);
+    orange = Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function Reset() {
@@ -83,13 +85,13 @@ $(".green").on("click", function () {
 
 $(".blue").on("click", function () {
     score = score + blue;
-    $(".blue").text(score);
+    $(".score").text(score);
     conditionCheck(score);
 });
 
 $(".orange").on("click", function () {
     score = score + orange;
-    $(".orange").text(score);
+    $(".score").text(score);
     conditionCheck(score);
 });
 
