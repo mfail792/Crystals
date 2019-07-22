@@ -1,8 +1,7 @@
 //declaring variables
 var randNum = 0;
-var numbers = [45, 87, 54, 66, 37, 24, 72];
+var numbers = [45, 87, 54, 77, 96, 111, 66, 104, 56, 49, 37, 24, 72];
 var score = 0;
-var number = 0;
 var green = 0;
 var red = 0;
 var blue = 0;
@@ -26,6 +25,7 @@ function Start() {
 
 //assigning random values 1-10 to crystals at start
 function Values() {
+
     red = Math.floor(Math.random() * (max - min + 1)) + min;
 
     blue = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -35,12 +35,6 @@ function Values() {
     orange = Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function Reset() {
-   $(".score").text("0");
-   Start();
-   }
-
-
 //console logging
 console.log(red);
 console.log(blue);
@@ -48,9 +42,8 @@ console.log(green);
 console.log(orange);
 
 //loading the starting functions upon new game
-Start()
-Values()
-
+Start();
+Values();
 //checking game conditions for win or loss
 function conditionCheck(score) {
     if (score === randNum) {
@@ -58,12 +51,15 @@ function conditionCheck(score) {
         $("#wins").html("Wins: " + wins);
         alert("You Win!");
         Reset();
+
     }
+
     else if (score > randNum) {
         losses++;
         $("#losses").html("Losses: " + losses);
         alert("Game Over Man!");
         Reset();
+
     } else { }
 }
 
@@ -94,6 +90,12 @@ $(".orange").on("click", function () {
     conditionCheck(score);
 });
 
+//resets the game
+function Reset() {
+    $(".score").text("0");
+    score = 0;
+    Start();
+}
 
 
 //ON CRYSTAL PRESS, ADD STORED VALUE TO RANDOM NUMBER (ALTERNATE SOLUTION USING JS AND JQ)
