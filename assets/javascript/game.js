@@ -60,7 +60,6 @@ function conditionCheck(score) {
         alert("Game Over Man!");
         GameOver();
         Reset();
-
     } else { }
 }
 
