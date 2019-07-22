@@ -36,10 +36,9 @@ function Values() {
 }
 
 function Reset() {
-    Start();
-    $(".score").text("0");
-
-}
+   $(".score").text("0");
+   Start();
+   }
 
 
 //console logging
