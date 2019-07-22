@@ -1,6 +1,6 @@
 //declaring variables
 var randNum = 0;
-var numbers = [45, 87, 54, 77, 96, 111, 66, 104, 56, 49, 37, 24, 72];
+var numbers = [45, 87, 54, 77, 35, 85, 101, 78, 21, 67, 81, 96, 111, 66, 104, 56, 49, 37, 24, 72];
 var score = 0;
 var green = 0;
 var red = 0;
