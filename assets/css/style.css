@@ -1,6 +1,6 @@
 body {
     background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/lilypads.png");
-    width: 960px;
+    width: 100%;
 }
 
 .random {
@@ -8,12 +8,17 @@ body {
     color: black;
 }
 
+.col-md-4 {
+    font-size: 125%;
+}
+
+
 .col-md-6 {
-    margin-bottom: 10px;
+   
     color: white;
-    width: 20px;
     font-size: 55px;
     float: left;
+    
 }
 
 .col-md-7 {
@@ -30,19 +35,24 @@ body {
     font-size: 20px;
     }
 
-    .orange {
-        padding-left: 3%;
-    }
+  .col-sm-1 {
+      margin-right: -2%;
+      
+  }
+ 
+  .orange {
+      padding-top: 2%;
+      padding-left: 2%;
+  }
 
-    .red {
-        margin-right: 2%;
-    }
+  .red {
+    padding-top: 2%;
+}
 
-    .blue {
-        margin-right: 2%;
-    }
+.blue {
+    padding-top: 2%;
+}
 
-    .green {
-        margin-right: 2%;
-    }
-
+.green {
+    padding-top: 2%;
+}
