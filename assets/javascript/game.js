@@ -50,14 +50,15 @@ function conditionCheck(score) {
         wins++;
         $("#wins").html("Wins: " + wins);
         alert("You Win!");
+        Prove();
         Reset();
-
     }
 
     else if (score > randNum) {
         losses++;
         $("#losses").html("Losses: " + losses);
         alert("Game Over Man!");
+        GameOver();
         Reset();
 
     } else { }
@@ -98,30 +99,19 @@ function Reset() {
     Start();
 }
 
-// *NOTES* //
+//losing audio
+function GameOver() {
+    var audio = new Audio('./assets/images/GAMEOVER.mp3');
+    audio.loop = false;
+    audio.play();
+}
 
-//ON CRYSTAL PRESS, ADD STORED VALUE TO RANDOM NUMBER (ALTERNATE SOLUTION USING JS AND JQ)
-// $(red).keypress(function () {
-//     document.getElementById("red").innerHTML = " " + score.join(" ");
-//     console.log(score);
-// });
-
-// $(green).keypress(function () {
-//     document.getElementById("green").innerHTML = " " + score.join(" ");
-//     console.log(score);
-// });
-
-// $(blue).keypress(function () {
-//     document.getElementById("blue").innerHTML = " " + score.join(" ");
-//     console.log(score);
-// });
-
-// $(orange).keypress(function () {
-//     document.getElementById("orange").innerHTML = " " + score.join(" ");
-//     console.log(score);
-// });
-
-
+//winning audio
+function Prove() {
+    var audio = new Audio('./assets/images/prove.mp3');
+    audio.loop = false;
+    audio.play();
+}
 
 
 
